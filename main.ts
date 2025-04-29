@@ -13,10 +13,24 @@ namespace RGBLed {
         Blue
     }
 
+    /**
+     * שנה את צבע נורת ה-RGB
+     * @param color הצבע שנבחר
+     */
     //% block="שנה צבע ל %color"
     export function setColor(color: RGBColor): void {
-        pins.analogWritePin(AnalogPin.P8, color == RGBColor.Red ? 1023 : 0)
-        pins.analogWritePin(AnalogPin.P12, color == RGBColor.Green ? 1023 : 0)
-        pins.analogWritePin(AnalogPin.P16, color == RGBColor.Blue ? 1023 : 0)
+        if (color == RGBColor.Red) {
+            pins.analogWritePin(AnalogPin.P8, 1023)
+            pins.analogWritePin(AnalogPin.P12, 0)
+            pins.analogWritePin(AnalogPin.P16, 0)
+        } else if (color == RGBColor.Green) {
+            pins.analogWritePin(AnalogPin.P8, 0)
+            pins.analogWritePin(AnalogPin.P12, 1023)
+            pins.analogWritePin(AnalogPin.P16, 0)
+        } else if (color == RGBColor.Blue) {
+            pins.analogWritePin(AnalogPin.P8, 0)
+            pins.analogWritePin(AnalogPin.P12, 0)
+            pins.analogWritePin(AnalogPin.P16, 1023)
+        }
     }
 }
