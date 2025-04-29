@@ -1,0 +1,9 @@
+{
+  "name": "rgb-led",
+  "version": "0.0.1",
+  "description": "הרחבה לשליטה בנורת RGB דרך פינים 8, 12 ו-16",
+  "dependencies": {},
+  "files": [
+    "main.ts"
+  ]
+}
