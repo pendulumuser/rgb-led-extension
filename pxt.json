@@ -1,7 +1,7 @@
 {
-  "name": "rgb-led",
+  "name": "rgb-led-extension",
   "version": "0.0.1",
-  "description": "הרחבה לשליטה בנורת RGB דרך פינים 8, 12 ו-16",
+  "description": "Extension for controlling an RGB LED via pins P8, P12, and P16",
   "dependencies": {},
   "files": [
     "main.ts"
